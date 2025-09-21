@@ -24,33 +24,33 @@ public class Scipttask
 	driver.get("https://d3pv22lioo8876.cloudfront.net/tiptop/");
 	driver.manage().window().maximize();
 	 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+	 
+	WebElement disable = driver.findElement(By.xpath("//input[@placeholder='Disabled input']"));
+	boolean enabled = disable.isEnabled();
+	System.out.println("is the button is enabled:" + enabled );
 	
-//	WebElement disable = driver.findElement(By.xpath("//input[@placeholder='Disabled input']"));
-//	boolean enabled = disable.isEnabled();
-//	System.out.println("is the button is enabled:" + enabled );
-//	
-//	WebElement readonly = driver.findElement(By.xpath("//input[@value='Readonly input']"));
-//	boolean equals = readonly.getAttribute("readonly").equals(readonly);
-//	System.out.println("Is field readonly: " + equals);
-//	WebElement readonly2 = driver.findElement(By.xpath("//label[@class='form-label w-100'][4]/input[1]"));
-//	//dropdown
-//	WebElement dropdown = driver.findElement(By.xpath("//select[@name='my-select']"));
-//	Select s=new Select(dropdown);
-//	List<WebElement> option = s.getOptions();
-//	int Size = option.size();
-//	if(Size == 8)
-//	{
-//		System.out.println("Dropdown have 8 colors");
-//	}
-//	else
-//	{
-//		System.out.println("dropdown not have 8 color");
-//	}
-//	
-//	WebElement dropdown1 = driver.findElement(By.xpath("//select[@class='form-select']"));
-//	Select s1=new Select(dropdown1);
-//	List<WebElement> option1 = s1.getOptions();
-//	System.out.println(option1.size());
+	WebElement readonly = driver.findElement(By.xpath("//input[@value='Readonly input']"));
+	boolean equals = readonly.getAttribute("readonly").equals(readonly);
+	System.out.println("Is field readonly: " + equals);
+	WebElement readonly2 = driver.findElement(By.xpath("//label[@class='form-label w-100'][4]/input[1]"));
+	//dropdown
+	WebElement dropdown = driver.findElement(By.xpath("//select[@name='my-select']"));
+	Select s=new Select(dropdown);
+	List<WebElement> option = s.getOptions();
+	int Size = option.size();
+	if(Size == 8)
+	{
+		System.out.println("Dropdown have 8 colors");
+	}
+	else
+	{
+		System.out.println("dropdown not have 8 color");
+	}
+	
+	WebElement dropdown1 = driver.findElement(By.xpath("//select[@class='form-select']"));
+	Select s1=new Select(dropdown1);
+	List<WebElement> option1 = s1.getOptions();
+	System.out.println(option1.size());
 
 	WebElement submitdis = driver.findElement(By.xpath("//button[@type='submit']"));
 	Boolean val = submitdis.isEnabled();
