@@ -17,7 +17,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Scipttask 
 {
-	public static void main(String[] args) throws AWTException, IOException
+	public static void main(String[] args) throws AWTException, IOException, InterruptedException
 	{		
 		WebDriverManager.chromedriver().setup();		
 	WebDriver driver= new ChromeDriver();
@@ -67,6 +67,7 @@ public class Scipttask
 	name.sendKeys("thulas");
 	WebElement password = driver.findElement(By.xpath("//input[@id='my-password-id']"));
 	password.sendKeys("1223");
+	Thread.sleep(1000);
 	Boolean val2 = submitdis.isEnabled();
 	if(val2 == true)
 	{
